@@ -1,0 +1,12 @@
+{
+  "name": "kunal-patil-portfolio",
+  "version": "1.0.0",
+  "description": "Kunal Patil | Full Stack Developer Portfolio",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "dev": "python -m http.server 3000"
+  },
+  "keywords": ["portfolio", "fullstack", "nextjs", "react", "nodejs"],
+  "author": "Kunal Patil <kp837882@gmail.com>",
+  "license": "MIT"
+}
