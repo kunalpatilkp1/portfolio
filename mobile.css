@@ -51,7 +51,7 @@
   .code-content { padding: 1rem; font-size: 0.82rem; }
 
   /* SKILLS */
-  .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
   /* TIMELINE */
   .timeline { padding-left: 1.5rem; }
@@ -153,6 +153,7 @@
   .svc-icon-wrap { width: 48px; height: 48px; }
 
   /* SKILLS */
+  .skills-grid { grid-template-columns: 1fr; }
   .skill-category { padding: 1.2rem; }
   .skill-bar-item { grid-template-columns: 1fr auto; }
 

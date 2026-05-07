@@ -169,13 +169,13 @@ animateParticles();
 
 // ─── TYPEWRITER ───
 const phrases = [
-  'Full Stack Developer',
-  'Next.js Engineer',
-  'React.js Specialist',
-  'Node.js + MongoDB Dev',
-  'Vercel Deployment Pro',
-  'PWA Builder',
-  'API Architect'
+  'Founding Engineer',
+  'Full Stack & AI Product Engineer',
+  'React.js & Next.js Developer',
+  'Mobile App Developer',
+  'AI Product Builder',
+  'Cloud & DevOps Engineer',
+  'React Native Developer'
 ];
 let phraseIndex = 0, charIndex = 0, deleting = false;
 const typeEl = document.getElementById('typewriter');
@@ -327,6 +327,26 @@ document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
   });
 });
 
+// ─── SCROLL PROGRESS BAR ───
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  if (!scrollProgress) return;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrolled = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+  scrollProgress.style.width = scrolled + '%';
+});
+
+// ─── SPOTLIGHT CURSOR EFFECT ───
+document.querySelectorAll('.spotlight').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty('--mouse-x', x + 'px');
+    card.style.setProperty('--mouse-y', y + 'px');
+  });
+});
+
 // ─── HERO GRID PARALLAX ───
 const heroGrid = document.querySelector('.hero-grid');
 window.addEventListener('mousemove', e => {
@@ -345,4 +365,4 @@ const sectionObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('section').forEach(s => sectionObserver.observe(s));
 
 console.log('%c KUNAL PATIL — PORTFOLIO ', 'background:#020b18;color:#00f5ff;font-size:14px;padding:8px 16px;border:1px solid #00f5ff;font-family:monospace;letter-spacing:3px;');
-console.log('%c Full Stack Developer | React.js • Node.js • MySQL ', 'color:#7b2fff;font-size:11px;font-family:monospace;');
+console.log('%c Founding Engineer | Full Stack & AI Product Engineer ', 'color:#7b2fff;font-size:11px;font-family:monospace;');
